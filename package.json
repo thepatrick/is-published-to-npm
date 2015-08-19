@@ -1,0 +1,23 @@
+{
+  "name": "is-published-to-npm",
+  "version": "1.0.0",
+  "description": "Checks if a given package & version have been pushed to npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Quinn-Graham <make-contact@pftqg.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^0.24.1",
+    "eslint-config-opentok": "0.0.1"
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "npm": "^2.13.5",
+    "npmlog": "^1.2.1"
+  },
+  "bin": {
+    "is-published-to-npm": "./bin/is-published-to-npm.js"
+  }
+}
