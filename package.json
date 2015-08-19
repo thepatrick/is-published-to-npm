@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thepatrick/is-published-to-npm.git"
+  },
   "author": "Patrick Quinn-Graham <make-contact@pftqg.com>",
   "license": "ISC",
   "bugs": {
