@@ -6,6 +6,10 @@ Is this version of this package published to npm yet?
 Use as a cli tool:
 
 ```
+# from a directory with a package.json
+is-published-to-npm
+
+# or for any package
 is-published-to-npm {your package} {your version}
 ```
 
