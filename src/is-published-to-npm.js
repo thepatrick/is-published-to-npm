@@ -19,7 +19,10 @@ module.exports = function(pkg, version, callback) {
         var remoteVersions = msg[remoteVersion].versions;
 
         if (~remoteVersions.indexOf(version)) {
-          callback(new Error(pkg + ' v' + version + ' has already been published'));
+          callback(new Error(
+            pkg + ' v' + version + ' has already been published. You need to increment the ' +
+            'version in a way that\'s appropriate to your changes before merging.'
+          ));
         } else {
           callback(undefined, remoteVersions);
         }
