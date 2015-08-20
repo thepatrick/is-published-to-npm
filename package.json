@@ -1,8 +1,8 @@
 {
   "name": "is-published-to-npm",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Checks if a given package & version have been pushed to npm",
-  "main": "index.js",
+  "main": "./src/is-published-to-npm",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
