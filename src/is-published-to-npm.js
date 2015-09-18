@@ -11,9 +11,13 @@ module.exports = function(pkg, version, callback) {
       throw err;
     }
     npm.commands.view([pkg, 'versions'], true, function(err, msg) {
+
       if (err && err.statusCode !== 404) {
+        callback(err);
+      } else if (err) {
         callback(undefined, []);
       } else {
+        console.log(err, msg);
         /* eslint guard-for-in: 0 */
         var remoteVersion = Object.keys(msg)[0];
         var remoteVersions = msg[remoteVersion].versions;
