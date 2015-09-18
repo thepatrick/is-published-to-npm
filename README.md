@@ -5,7 +5,7 @@ Is this version of this package published to npm yet?
 
 Use as a cli tool:
 
-```
+``` bash
 # from a directory with a package.json
 is-published-to-npm
 
@@ -17,7 +17,7 @@ is-published-to-npm {your package} {your version}
 
 Or as a module:
 
-```
+``` javascript
 var isPublishedToNPM = require('is-published-to-npm');
 
 var pkg = process.argv[2];
