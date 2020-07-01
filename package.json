@@ -20,7 +20,7 @@
     "eslint-config-opentok": "0.0.1"
   },
   "dependencies": {
-    "npm": "^2.13.5"
+    "npm": "^6.14.5"
   },
   "bin": {
     "is-published-to-npm": "./bin/is-published-to-npm.js"
