@@ -16,7 +16,7 @@
     "url": "https://github.com/thepatrick/is-published-to-npm/issues"
   },
   "devDependencies": {
-    "eslint": "^0.24.1",
+    "eslint": "^7.3.1",
     "eslint-config-opentok": "0.0.1"
   },
   "dependencies": {
