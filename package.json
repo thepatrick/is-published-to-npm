@@ -1,10 +1,14 @@
 {
   "name": "is-published-to-npm",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "description": "Checks if a given package & version have been pushed to npm",
-  "main": "./src/is-published-to-npm",
+  "main": "./dist/lib/is-published-to-npm.js",
+  "types": "./dist/lib/is-published-to-npm.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "lint": "eslint --ext .ts ./",
+    "test": "npm run lint",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,13 +20,21 @@
     "url": "https://github.com/thepatrick/is-published-to-npm/issues"
   },
   "devDependencies": {
+    "@types/node": "^12.12.50",
+    "@types/npm": "^2.0.31",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
     "eslint": "^7.3.1",
-    "eslint-config-opentok": "0.0.1"
+    "eslint-config-opentok": "0.0.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6"
   },
   "dependencies": {
     "npm": "^6.14.6"
   },
   "bin": {
-    "is-published-to-npm": "./bin/is-published-to-npm.js"
+    "is-published-to-npm": "./dist/bin/is-published-to-npm.js"
   }
 }

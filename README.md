@@ -13,22 +13,28 @@ is-published-to-npm
 is-published-to-npm {your package} {your version}
 ```
 
-(Check the exit status - anything not zero means yes it has!)
+(Check the exit status - anything not zero means it has already been published)
 
 Or as a module:
 
 ``` javascript
-var isPublishedToNPM = require('is-published-to-npm');
+const { isPublishedToNPM } = require('is-published-to-npm');
+// or import { isPublishedToNPM } from 'is-published-to-npm';
 
-var pkg = process.argv[2];
-var version = process.argv[3];
+const pkg = process.argv[2];
+const version = process.argv[3];
 
-isPublishedToNPM(pkg, version, function(err) {
-  if (err) {
+isPublishedToNPM(pkg, version)
+  .then(published => {
+    if (published) {
+      console.log(pkg + ' v' + version + ' has been published');
+      process.exit(1);
+    } else {
+      console.log(pkg + ' v' + version + ' has not been published yet');
+    }
+  })
+  .catch(err => {
     console.log(err.message);
     process.exit(1);
-  } else {
-    console.log(pkg + ' v' + version + ' has not been published yet!');
-  }
-});
+  });
 ```
